@@ -1,271 +1,248 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Biodata - Fariz Surya Adi Pratama</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <style>
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(15px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .animate-fade { animation: fadeIn 0.5s ease-out forwards; }
-        .info-row { border-bottom: 1px solid #f1f5f9; padding: 12px 0; display: flex; justify-content: space-between; }
-        .info-row:last-child { border-bottom: none; }
-    </style>
-</head>
-<body class="bg-slate-50 text-slate-900 font-sans min-h-screen relative flex flex-col items-center pb-12 pt-24 md:pt-32 px-4 md:px-8">
+<!DOCTYPE html> 
+<html lang="id"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Biodata - Fariz Surya Adi Pratama</title> 
+    <script src="https://cdn.tailwindcss.com"></script> 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"> 
+    <style> 
+        @keyframes fadeIn { 
+            from { opacity: 0; transform: translateY(15px); } 
+            to { opacity: 1; transform: translateY(0); } 
+        } 
+        .animate-fade { animation: fadeIn 0.5s ease-out forwards; } 
+        .info-row { border-bottom: 1px solid #f1f5f9; padding: 12px 0; display: flex; justify-content: space-between; } 
+        .info-row:last-child { border-bottom: none; } 
+    </style> 
+</head> 
+<body class="bg-slate-50 text-slate-900 font-sans min-h-screen relative flex flex-col items-center pb-12 pt-24 md:pt-32 px-4 md:px-8"> 
+    <header class="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-md z-50 px-6 md:px-12 py-4 flex justify-between items-center border-b border-slate-200 shadow-sm"> 
+        <div class="text-2xl font-black text-slate-800 tracking-tighter"> PARIZS<span class="text-blue-500">.</span> </div> 
+        <div class="relative"> 
+            <button id="menu-btn" class="w-12 h-12 rounded-full border-2 border-orange-500 flex flex-col justify-center items-center gap-1.5 bg-white hover:bg-orange-50 transition cursor-pointer"> 
+                <span class="block w-5 h-0.5 bg-slate-800"></span> 
+                <span class="block w-5 h-0.5 bg-slate-800"></span> 
+                <span class="block w-5 h-0.5 bg-slate-800"></span> 
+            </button> 
+            <div id="dropdown-menu" class="hidden absolute top-16 right-0 bg-white rounded-2xl shadow-xl border border-slate-100 w-64 py-2 overflow-hidden transition-all"> 
+                <button onclick="switchTab('tentang-saya')" class="w-full text-left block px-6 py-3 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 font-medium transition-colors">Tentang Saya</button> 
+                <button onclick="switchTab('pendidikan')" class="w-full text-left block px-6 py-3 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 font-medium transition-colors">Pendidikan & Keahlian</button> 
+                <button onclick="switchTab('data-diri')" class="w-full text-left block px-6 py-3 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 font-medium transition-colors">Data Diri Di Kampus</button> 
+                <button onclick="switchTab('cerita-Memori-Jas-Putih-di-Masa-TK')" class="w-full text-left block px-6 py-3 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 font-medium transition-colors">Cerita 1</button> 
+                <button onclick="switchTab('cerita-turnamen')" class="w-full text-left block px-6 py-3 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 font-medium transition-colors">Cerita 2</button> 
+                <button onclick="switchTab('cerita-pkkmb')" class="w-full text-left block px-6 py-3 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 font-medium transition-colors">Cerita 3</button> 
+                <button onclick="switchTab('cerita-4')" class="w-full text-left block px-6 py-3 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 font-medium transition-colors">Cerita 4</button>
+            </div> 
+        </div> 
+    </header> 
 
-    <header class="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-md z-50 px-6 md:px-12 py-4 flex justify-between items-center border-b border-slate-200 shadow-sm">
-        <div class="text-2xl font-black text-slate-800 tracking-tighter">
-            PARIZS<span class="text-blue-500">.</span>
-        </div>
-        
-        <div class="relative">
-            <button id="menu-btn" class="w-12 h-12 rounded-full border-2 border-orange-500 flex flex-col justify-center items-center gap-1.5 bg-white hover:bg-orange-50 transition cursor-pointer">
-                <span class="block w-5 h-0.5 bg-slate-800"></span>
-                <span class="block w-5 h-0.5 bg-slate-800"></span>
-                <span class="block w-5 h-0.5 bg-slate-800"></span>
-            </button>
+    <div class="max-w-6xl w-full bg-white rounded-3xl shadow-2xl overflow-hidden flex flex-col md:flex-row border border-blue-100"> 
+        <div class="w-full md:w-1/3 bg-gradient-to-b from-blue-900 via-blue-800 to-indigo-900 p-8 text-white flex flex-col items-center text-center"> 
+            <div class="relative group"> 
+                <div class="w-48 h-48 rounded-full border-4 border-blue-400/50 overflow-hidden mb-6 shadow-2xl transition-transform duration-500 group-hover:scale-105"> 
+                    <img src="pariz.JPEG" alt="Fariz Surya" class="w-full h-full object-cover" onerror="this.src='https://ui-avatars.com/api/?name=Fariz+Surya&background=0D8ABC&color=fff&size=200'"> 
+                </div> 
+                <div class="absolute inset-0 rounded-full border-2 border-dashed border-white/20 animate-spin-slow p-2 pointer-events-none"></div> 
+            </div> 
+            <h1 class="text-3xl font-black tracking-tight mb-2">Fariz Surya Adi Pratama</h1> 
+            <p class="text-blue-200 font-medium mb-6 uppercase tracking-widest text-sm">Management Student</p> 
+            <div class="flex flex-wrap gap-2 justify-center mb-8"> 
+                <span class="px-3 py-1 bg-blue-500/30 rounded-lg text-xs font-bold border border-blue-400/20">FUTURE MANAGER</span> 
+                <span class="px-3 py-1 bg-sky-500/30 rounded-lg text-xs font-bold border border-sky-400/20">TECH LEARNER</span> 
+            </div> 
+            <div class="w-full space-y-5 text-left border-t border-white/10 pt-8"> 
+                <div class="flex items-center space-x-4 group"> 
+                    <div class="w-10 h-10 bg-blue-700/50 rounded-lg flex items-center justify-center text-blue-300"> <i class="fas fa-envelope"></i> </div> 
+                    <div> 
+                        <p class="text-[10px] text-blue-400 font-bold uppercase tracking-wider">Email</p> 
+                        <a href="mailto:fariz.pratama3308@gmail.com" class="text-sm text-white truncate hover:text-blue-200 hover:underline transition-all block">fariz.pratama3308@gmail.com</a> 
+                    </div> 
+                </div> 
+                <div class="flex items-center space-x-4 group"> 
+                    <div class="w-10 h-10 bg-blue-700/50 rounded-lg flex items-center justify-center text-blue-300"> <i class="fab fa-whatsapp"></i> </div> 
+                    <div> 
+                        <p class="text-[10px] text-blue-400 font-bold uppercase tracking-wider">Phone / WhatsApp</p> 
+                        <a href="https://wa.me/6282229962049" target="_blank" class="text-sm text-white hover:text-blue-200 hover:underline transition-all block">0822-2996-2049</a> 
+                    </div> 
+                </div> 
+                <div class="flex items-center space-x-4 group"> 
+                    <div class="w-10 h-10 bg-blue-700/50 rounded-lg flex items-center justify-center text-blue-300"> <i class="fab fa-instagram"></i> </div> 
+                    <div> 
+                        <p class="text-[10px] text-blue-400 font-bold uppercase tracking-wider">Instagram</p> 
+                        <a href="https://www.instagram.com/p4rizzs" target="_blank" class="text-sm text-white hover:text-blue-200 hover:underline transition-all block">@p4rizzs</a> 
+                    </div> 
+                </div> 
+                <div class="flex items-center space-x-4 group"> 
+                    <div class="w-10 h-10 bg-blue-700/50 rounded-lg flex items-center justify-center text-blue-300"> <i class="fas fa-map-marker-alt"></i> </div> 
+                    <div> 
+                        <p class="text-[10px] text-blue-400 font-bold uppercase tracking-wider">Domisili</p> 
+                        <p class="text-sm text-white font-medium">Kab. Tangerang, Banten</p> 
+                    </div> 
+                </div> 
+            </div> 
+        </div> 
 
-            <div id="dropdown-menu" class="hidden absolute top-16 right-0 bg-white rounded-2xl shadow-xl border border-slate-100 w-64 py-2 overflow-hidden transition-all">
-                <button onclick="switchTab('tentang-saya')" class="w-full text-left block px-6 py-3 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 font-medium transition-colors">Tentang Saya</button>
-                <button onclick="switchTab('pendidikan')" class="w-full text-left block px-6 py-3 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 font-medium transition-colors">Pendidikan & Keahlian</button>
-                <button onclick="switchTab('data-diri')" class="w-full text-left block px-6 py-3 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 font-medium transition-colors">Data Diri Di Kampus</button>
-                <button onclick="switchTab('cerita-lebaran')" class="w-full text-left block px-6 py-3 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 font-medium transition-colors">Cerita Lebaran</button>
-                <button onclick="switchTab('cerita-liburan')" class="w-full text-left block px-6 py-3 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 font-medium transition-colors">Cerita Liburan Saat Lebaran</button>
-                <button onclick="switchTab('cerita-pkkmb')" class="w-full text-left block px-6 py-3 text-sm text-slate-700 hover:bg-blue-50 hover:text-blue-600 font-medium transition-colors">Cerita Saat PKKMB</button>
-            </div>
-        </div>
-    </header>
-
-    <div class="max-w-6xl w-full bg-white rounded-3xl shadow-2xl overflow-hidden flex flex-col md:flex-row border border-blue-100">
-        
-        <div class="w-full md:w-1/3 bg-gradient-to-b from-blue-900 via-blue-800 to-indigo-900 p-8 text-white flex flex-col items-center text-center">
-            <div class="relative group">
-                <div class="w-48 h-48 rounded-full border-4 border-blue-400/50 overflow-hidden mb-6 shadow-2xl transition-transform duration-500 group-hover:scale-105">
-                    <img src="pariz.JPEG" alt="Fariz Surya" class="w-full h-full object-cover" onerror="this.src='https://ui-avatars.com/api/?name=Fariz+Surya&background=0D8ABC&color=fff&size=200'">
-                </div>
-                <div class="absolute inset-0 rounded-full border-2 border-dashed border-white/20 animate-spin-slow p-2 pointer-events-none"></div>
-            </div>
-
-            <h1 class="text-3xl font-black tracking-tight mb-2">Fariz Surya Adi Pratama</h1>
-            <p class="text-blue-200 font-medium mb-6 uppercase tracking-widest text-sm">Management Student</p>
-            
-            <div class="flex flex-wrap gap-2 justify-center mb-8">
-                <span class="px-3 py-1 bg-blue-500/30 rounded-lg text-xs font-bold border border-blue-400/20">FUTURE MANAGER</span>
-                <span class="px-3 py-1 bg-sky-500/30 rounded-lg text-xs font-bold border border-sky-400/20">TECH LEARNER</span>
-            </div>
-
-           <div class="w-full space-y-5 text-left border-t border-white/10 pt-8">
-    
-                <div class="flex items-center space-x-4 group">
-                    <div class="w-10 h-10 bg-blue-700/50 rounded-lg flex items-center justify-center text-blue-300">
-                        <i class="fas fa-envelope"></i>
-                    </div>
-                    <div>
-                        <p class="text-[10px] text-blue-400 font-bold uppercase tracking-wider">Email</p>
-                        <a href="mailto:fariz.pratama3308@gmail.com" class="text-sm text-white truncate hover:text-blue-200 hover:underline transition-all block">fariz.pratama3308@gmail.com</a>
-                    </div>
-                </div>
-
-                <div class="flex items-center space-x-4 group">
-                    <div class="w-10 h-10 bg-blue-700/50 rounded-lg flex items-center justify-center text-blue-300">
-                        <i class="fab fa-whatsapp"></i>
-                    </div>
-                    <div>
-                        <p class="text-[10px] text-blue-400 font-bold uppercase tracking-wider">Phone / WhatsApp</p>
-                        <a href="https://wa.me/6282229962049" target="_blank" class="text-sm text-white hover:text-blue-200 hover:underline transition-all block">0822-2996-2049</a>
-                    </div>
-                </div>
-
-                <div class="flex items-center space-x-4 group">
-                    <div class="w-10 h-10 bg-blue-700/50 rounded-lg flex items-center justify-center text-blue-300">
-                        <i class="fab fa-instagram"></i>
-                    </div>
-                    <div>
-                        <p class="text-[10px] text-blue-400 font-bold uppercase tracking-wider">Instagram</p>
-                        <a href="https://www.instagram.com/p4rizzs" target="_blank" class="text-sm text-white hover:text-blue-200 hover:underline transition-all block">@p4rizzs</a>
-                    </div>
-                </div>
-
-                <div class="flex items-center space-x-4 group">
-                    <div class="w-10 h-10 bg-blue-700/50 rounded-lg flex items-center justify-center text-blue-300">
-                        <i class="fas fa-map-marker-alt"></i>
-                    </div>
-                    <div>
-                        <p class="text-[10px] text-blue-400 font-bold uppercase tracking-wider">Domisili</p>
-                        <p class="text-sm text-white font-medium">Kab. Tangerang, Banten</p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-        <div class="w-full md:w-2/3 bg-slate-50 relative min-h-[600px] flex flex-col">
-            
-            <div class="p-8 md:p-12">
-                
-                <div id="tentang-saya" class="tab-content block animate-fade">
-                    <div class="flex items-center mb-8">
-                        <div class="w-2 h-8 bg-blue-600 rounded-full mr-3"></div>
-                        <h2 class="text-3xl font-bold text-slate-800">Tentang Saya</h2>
-                    </div>
-                    <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100">
-                        <div class="text-slate-600 leading-relaxed text-lg mb-6">
-                            Nama : <span class="font-bold text-blue-600">FARIZ SURYA ADI PRATAMA</span><br>
-                            Tgl lahir : <span class="font-bold text-blue-600">Mojokerto, 03 Maret 2008</span><br>
-                            Kewarganegaraan : Indonesia<br>
-                            Jenis Kelamin : Laki-laki<br>
-                            Agama : Islam
-                        </div>
-                        <p class="text-slate-600 leading-relaxed text-lg">
-                            Saya Fariz Surya Adi Pratama, seorang <span class="font-bold text-blue-600">mahasiswa Manajemen</span> dari <span class="font-bold text-blue-600">Universitas Gunadarma</span> yang berfokus pada integrasi teknologi dalam dunia bisnis. Dengan minat khusus pada <span class="font-bold text-blue-600">Digital Business</span> dan <span class="font-bold text-blue-600">Strategic Marketing</span>, saya berdedikasi untuk terus mempelajari bagaimana <span class="font-bold text-blue-600">sistem manajemen berbasis web</span> dapat menjadi solusi bagi tantangan industri masa depan. Saya adalah pribadi yang <span class="font-bold text-blue-600">adaptif</span> dan selalu <span class="font-bold text-blue-600">haus akan ilmu baru</span>.
-                        </p>
-                    </div>
-                </div>
-
-                <div id="pendidikan" class="tab-content hidden animate-fade">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-                        <div>
-                            <div class="flex items-center mb-6">
-                                <div class="w-2 h-8 bg-sky-500 rounded-full mr-3"></div>
-                                <h2 class="text-2xl font-bold text-slate-800">Pendidikan</h2>
-                            </div>
-                            <div class="space-y-6">
-                                <div class="pl-4 border-l-4 border-blue-600">
-                                    <a href="https://gunadarma.ac.id" target="_blank" class="font-bold text-slate-800 hover:text-blue-600 hover:underline transition-colors block">Univ. Gunadarma</a>
-                                    <p class="text-slate-500 text-sm">S1 Manajemen | 2025 - Sekarang</p>
-                                </div>
-                                <div class="pl-4 border-l-4 border-slate-300">
-                                    <a href="https://smkn2kediri.sch.id" target="_blank" class="font-bold text-slate-700 hover:text-blue-600 hover:underline transition-colors block">SMKN 2 KOTA KEDIRI</a>
-                                    <p class="text-slate-500 text-sm">2022 - 2025</p>
-                                </div>
-                                <div class="pl-4 border-l-4 border-slate-300">
-                                    <a href="https://smpn1plosoklaten.sch.id" target="_blank" class="font-bold text-slate-700 hover:text-blue-600 hover:underline transition-colors block">SMPN 1 PLOSOKLATEN</a>
-                                    <p class="text-slate-500 text-sm">2019 - 2022</p>
-                                </div>
-                                <div class="pl-4 border-l-4 border-slate-300">
-                                    <a href="https://www.google.com/search?q=SD+WIRYA+SEDANA+GIANYAR" target="_blank" class="font-bold text-slate-700 hover:text-blue-600 hover:underline transition-colors block">SD WIRYA SEDANA GIANYAR</a>
-                                    <p class="text-slate-500 text-sm">2019 - 2022</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="space-y-8">
-                            <div>
-                                <h3 class="text-lg font-bold text-slate-800 mb-4 flex items-center"><i class="fas fa-tools mr-2 text-blue-500"></i> Keahlian</h3>
-                                <div class="flex flex-wrap gap-2">
-                                    <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-[10px] font-bold">MS OFFICE</span>
-                                    <span class="bg-cyan-100 text-cyan-700 px-3 py-1 rounded-full text-[10px] font-bold">HTML/CSS</span>
-                                    <span class="bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full text-[10px] font-bold">GRAPHIC DESIGN</span>
-                                </div>
-                            </div>
-                            <div>
-                                <h3 class="text-lg font-bold text-slate-800 mb-4 flex items-center"><i class="fas fa-heart mr-2 text-rose-500"></i> Hobi</h3>
-                                <ul class="text-slate-600 text-sm space-y-2">
-                                    <li class="flex items-center"><i class="fas fa-check-circle text-blue-400 mr-2"></i> Ngemil</li>
-                                    <li class="flex items-center"><i class="fas fa-check-circle text-blue-400 mr-2"></i> Mendengarkan Musik</li>
-                                    <li class="flex items-center"><i class="fas fa-check-circle text-blue-400 mr-2"></i> Olahraga (Futsal & Lari)</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div id="data-diri" class="tab-content hidden animate-fade">
-                    <div class="flex items-center mb-8">
-                        <div class="w-2 h-8 bg-blue-600 rounded-full mr-3"></div>
-                        <h2 class="text-3xl font-bold text-slate-800">Data Diri Di Kampus</h2>
-                    </div>
-                    
-                    <div class="bg-white p-8 rounded-3xl shadow-sm border border-blue-50">
-                        <div class="info-row"><span class="text-slate-500 font-medium uppercase text-xs tracking-wider">Nama Lengkap</span><span class="text-slate-800 font-bold">Fariz Surya Adi Pratama</span></div>
-                        <div class="info-row"><span class="text-slate-500 font-medium uppercase text-xs tracking-wider">NPM</span><span class="text-blue-600 font-black tracking-widest">10225572</span></div>
-                        <div class="info-row"><span class="text-slate-500 font-medium uppercase text-xs tracking-wider">Program Studi</span><span class="text-slate-800 font-semibold">Manajemen</span></div>
-                        <div class="info-row"><span class="text-slate-500 font-medium uppercase text-xs tracking-wider">Fakultas</span><span class="text-slate-800 font-semibold">Ekonomi</span></div>
-                        <div class="info-row"><span class="text-slate-500 font-medium uppercase text-xs tracking-wider">Universitas</span><span class="text-slate-800 font-semibold">Universitas Gunadarma</span></div>
-                        <div class="info-row"><span class="text-slate-500 font-medium uppercase text-xs tracking-wider">Tahun Masuk</span><span class="text-slate-800 font-semibold">2025</span></div>
-                        <div class="info-row"><span class="text-slate-500 font-medium uppercase text-xs tracking-wider">Semester</span><span class="text-slate-800 font-semibold italic text-blue-500">2 (Dua)</span></div>
-                        <div class="p-8 md:p-12 pt-0 mt-auto">
-                            <div class="p-6 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl border border-blue-100 text-center">
-                                <p class="text-blue-800 italic font-medium">"Terus belajar & berkembang setiap hari!"</p>
-                            </div>
+        <div class="w-full md:w-2/3 bg-slate-50 relative min-h-[600px] flex flex-col"> 
+            <div class="p-8 md:p-12"> 
+                <div id="tentang-saya" class="tab-content block animate-fade"> 
+                    <div class="flex items-center mb-8"> 
+                        <div class="w-2 h-8 bg-blue-600 rounded-full mr-3"></div> 
+                        <h2 class="text-3xl font-bold text-slate-800">Tentang Saya</h2> 
+                    </div> 
+                    <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100"> 
+                        <div class="text-slate-600 leading-relaxed text-lg mb-6"> Nama : <span class="font-bold text-blue-600">FARIZ SURYA ADI PRATAMA</span><br> Tgl lahir : <span class="font-bold text-blue-600">Mojokerto, 03 Maret 2008</span><br> Kewarganegaraan : Indonesia<br> Jenis Kelamin : Laki-laki<br> Agama : Islam </div> 
+                        <p class="text-slate-600 leading-relaxed text-lg"> Saya Fariz Surya Adi Pratama, seorang <span class="font-bold text-blue-600">mahasiswa Manajemen</span> dari <span class="font-bold text-blue-600">Universitas Gunadarma</span> yang berfokus pada integrasi teknologi dalam dunia bisnis. Dengan minat khusus pada <span class="font-bold text-blue-600">Digital Business</span> dan <span class="font-bold text-blue-600">Strategic Marketing</span>, saya berdedikasi untuk terus mempelajari bagaimana <span class="font-bold text-blue-600">sistem manajemen berbasis web</span> dapat menjadi solusi bagi tantangan industri masa depan. Saya adalah pribadi yang <span class="font-bold text-blue-600">adaptif</span> dan selalu <span class="font-bold text-blue-600">haus akan ilmu baru</span>. </p> 
+                    </div> 
+                </div> 
+                <div id="pendidikan" class="tab-content hidden animate-fade"> 
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-10"> 
+                        <div> 
+                            <div class="flex items-center mb-6"> 
+                                <div class="w-2 h-8 bg-sky-500 rounded-full mr-3"></div> 
+                                <h2 class="text-2xl font-bold text-slate-800">Pendidikan</h2> 
+                            </div> 
+                            <div class="space-y-6"> 
+                                <div class="pl-4 border-l-4 border-blue-600"> 
+                                    <a href="https://gunadarma.ac.id" target="_blank" class="font-bold text-slate-800 hover:text-blue-600 hover:underline transition-colors block">Univ. Gunadarma</a> 
+                                    <p class="text-slate-500 text-sm">S1 Manajemen | 2025 - Sekarang</p> 
+                                </div> 
+                                <div class="pl-4 border-l-4 border-slate-300"> 
+                                    <a href="https://smkn2kediri.sch.id" target="_blank" class="font-bold text-slate-700 hover:text-blue-600 hover:underline transition-colors block">SMKN 2 KOTA KEDIRI</a> 
+                                    <p class="text-slate-500 text-sm">2022 - 2025</p> 
+                                </div> 
+                                <div class="pl-4 border-l-4 border-slate-300"> 
+                                    <a href="https://smpn1plosoklaten.sch.id" target="_blank" class="font-bold text-slate-700 hover:text-blue-600 hover:underline transition-colors block">SMPN 1 PLOSOKLATEN</a> 
+                                    <p class="text-slate-500 text-sm">2019 - 2022</p> 
+                                </div> 
+                                <div class="pl-4 border-l-4 border-slate-300"> 
+                                    <a href="https://www.google.com/search?q=SD+WIRYA+SEDANA+GIANYAR" target="_blank" class="font-bold text-slate-700 hover:text-blue-600 hover:underline transition-colors block">SD WIRYA SEDANA GIANYAR</a> 
+                                    <p class="text-slate-500 text-sm">2019 - 2022</p> 
+                                </div> 
+                            </div> 
                         </div> 
-                    </div>
+                        <div class="space-y-8"> 
+                            <div> 
+                                <h3 class="text-lg font-bold text-slate-800 mb-4 flex items-center"><i class="fas fa-tools mr-2 text-blue-500"></i> Keahlian</h3> 
+                                <div class="flex flex-wrap gap-2"> 
+                                    <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-[10px] font-bold">MS OFFICE</span> 
+                                    <span class="bg-cyan-100 text-cyan-700 px-3 py-1 rounded-full text-[10px] font-bold">HTML/CSS</span> 
+                                    <span class="bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full text-[10px] font-bold">GRAPHIC DESIGN</span> 
+                                </div> 
+                            </div> 
+                            <div> 
+                                <h3 class="text-lg font-bold text-slate-800 mb-4 flex items-center"><i class="fas fa-heart mr-2 text-rose-500"></i> Hobi</h3> 
+                                <ul class="text-slate-600 text-sm space-y-2"> 
+                                    <li class="flex items-center"><i class="fas fa-check-circle text-blue-400 mr-2"></i> Ngemil</li> 
+                                    <li class="flex items-center"><i class="fas fa-check-circle text-blue-400 mr-2"></i> Mendengarkan Musik</li> 
+                                    <li class="flex items-center"><i class="fas fa-check-circle text-blue-400 mr-2"></i> Olahraga (Futsal & Lari)</li> 
+                                </ul> 
+                            </div> 
+                        </div> 
+                    </div> 
+                </div> 
+                <div id="data-diri" class="tab-content hidden animate-fade"> 
+                    <div class="flex items-center mb-8"> 
+                        <div class="w-2 h-8 bg-blue-600 rounded-full mr-3"></div> 
+                        <h2 class="text-3xl font-bold text-slate-800">Data Diri Di Kampus</h2> 
+                    </div> 
+                    <div class="bg-white p-8 rounded-3xl shadow-sm border border-blue-50"> 
+                        <div class="info-row"><span class="text-slate-500 font-medium uppercase text-xs tracking-wider">Nama Lengkap</span><span class="text-slate-800 font-bold">Fariz Surya Adi Pratama</span></div> 
+                        <div class="info-row"><span class="text-slate-500 font-medium uppercase text-xs tracking-wider">NPM</span><span class="text-blue-600 font-black tracking-widest">10225572</span></div> 
+                        <div class="info-row"><span class="text-slate-500 font-medium uppercase text-xs tracking-wider">Program Studi</span><span class="text-slate-800 font-semibold">Manajemen</span></div> 
+                        <div class="info-row"><span class="text-slate-500 font-medium uppercase text-xs tracking-wider">Fakultas</span><span class="text-slate-800 font-semibold">Ekonomi</span></div> 
+                        <div class="info-row"><span class="text-slate-500 font-medium uppercase text-xs tracking-wider">Universitas</span><span class="text-slate-800 font-semibold">Universitas Gunadarma</span></div> 
+                        <div class="info-row"><span class="text-slate-500 font-medium uppercase text-xs tracking-wider">Tahun Masuk</span><span class="text-slate-800 font-semibold">2025</span></div> 
+                        <div class="info-row"><span class="text-slate-500 font-medium uppercase text-xs tracking-wider">Semester</span><span class="text-slate-800 font-semibold italic text-blue-500">2 (Dua)</span></div> 
+                        <div class="p-8 md:p-12 pt-0 mt-auto"> 
+                            <div class="p-6 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl border border-blue-100 text-center"> 
+                                <p class="text-blue-800 italic font-medium">"Terus belajar & berkembang setiap hari!"</p> 
+                            </div> 
+                        </div> 
+                    </div> 
+                </div> 
+                <div id="cerita-Memori-Jas-Putih-di-Masa-TK" class="tab-content hidden animate-fade"> 
+                    <div class="flex items-center mb-6"> 
+                        <div class="w-2 h-8 bg-sky-500 rounded-full mr-3"></div> 
+                        <h2 class="text-3xl font-bold text-slate-800">Memori Jas Putih di Masa TK</h2> 
+                    </div> 
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-blue-50"> 
+                        <div class="mb-6 rounded-xl overflow-hidden shadow-md"> 
+                            <div class="mb-6 rounded-xl overflow-hidden shadow-md border-4 border-blue-500"> 
+                                <img src="dokter.jpeg" alt="Foto Lebaran" class="w-full h-[650px] md:h-[850px] object-cover" onerror="this.src='https://via.placeholder.com/800x400?text=Foto+Lebaran+Fariz'"> 
+                            </div> 
+                        </div> 
+                        <p class="text-slate-600 text-lg leading-relaxed">Hari itu di TK sangat seru karena ada acara peragaan cita-cita. Aku merasa gagah sekali memakai jas putih dokter lengkap dengan tanda pengenal yang menggantung di leher.
+Tugasku hari itu adalah menjadi "dokter" yang memeriksa teman-teman. Dengan gaya super serius, aku berpura-pura memeriksa detak jantung mereka pakai stetoskop mainan dan mengingatkan mereka untuk rajin cuci tangan serta makan sayur. Rasanya bangga sekali bisa berdiri di depan backdrop acara sambil tersenyum lebar. Pengalaman seru jadi dokter kecil seharian itu bikin aku pulang ke rumah dengan senyum yang tidak hilang-hilang!</p> 
+                    </div> 
+                </div> 
+                <div id="cerita-turnamen" class="tab-content hidden animate-fade"> 
+                    <div class="flex items-center mb-6"> 
+                        <div class="w-2 h-8 bg-indigo-500 rounded-full mr-3"></div> 
+                        <h2 class="text-3xl font-bold text-slate-800">Detik Detik Peluit Akhir</h2> 
+                    </div> 
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-blue-50"> 
+                        <div class="mb-6 rounded-xl overflow-hidden shadow-md"> 
+                            <div class="mb-6 rounded-xl overflow-hidden shadow-md border-4 border-blue-500"> 
+                                <img src="turnamen.jpeg" alt="Foto Liburan" class="w-full h-[300px] md:h-[400px] object-cover" onerror="this.src='https://via.placeholder.com/800x400?text=Foto+Liburan+Fariz'"> 
+                            </div> 
+                        </div> 
+                        <p class="text-slate-600 text-lg leading-relaxed">Hari terakhir turnamen IKABRI menjadi babak penentuan yang paling emosional untuk tim saya. Kami bertanding habis-habisan di lapangan, saling menutup ruang, dan jatuh bangun menahan gempuran lawan yang begitu tangguh. Sayangnya, sampai peluit panjang berbunyi, papan skor tidak berpihak pada kami. Kami kalah.
+Rasa kecewa dan lelah langsung menyelimuti seluruh tim, beberapa dari kami bahkan tertunduk lesu di pinggir lapangan. Namun, setelah beristirahat sejenak, kami memutuskan untuk tetap berdiri tegak dan berfoto bersama di depan backdrop turnamen. Meskipun pulang tanpa piala, turnamen ini memberi kami pelajaran berharga tentang arti kerja keras, evaluasi diri, dan yang paling penting: kekompakan kami sebagai satu tim yang tidak akan luntur cuma karena satu kekalahan.</p> 
+                    </div> 
+                </div> 
+                <div id="cerita-pkkmb" class="tab-content hidden animate-fade"> 
+                    <div class="flex items-center mb-6"> 
+                        <div class="w-2 h-8 bg-indigo-500 rounded-full mr-3"></div> 
+                        <h2 class="text-3xl font-bold text-slate-800">Detik Detik Menjadi Anak Gundar</h2> 
+                    </div> 
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-blue-50"> 
+                        <div class="mb-6 rounded-xl overflow-hidden shadow-md"> 
+                            <div class="mb-6 rounded-xl overflow-hidden shadow-md border-4 border-blue-500"> 
+                                <img src="pkkmb.jpeg" alt="Foto PKKMB" class="w-full h-[300px] md:h-[400px] object-cover" onerror="this.src='https://via.placeholder.com/800x400?text=Foto+PKKMB+Fariz'"> 
+                            </div> 
+                        </div> 
+                        <p class="text-slate-600 text-lg leading-relaxed">Pagi itu, di Sport Center Kampus H Universitas Gunadarma dipenuhi lautan mahasiswa baru berbalut kemeja putih dan celana hitam. Duduk di lantai beralas karpet abu-abu di dalam gedung olahraga beratap tinggi yang megah, rasa gugup dan antusias bercampur aduk menjadi satu saat mengikuti rangkaian PKKMB Fakultas Ekonomi.
+Melihat spanduk besar bernuansa orange di depan panggung dan pita kuning yang terikat rapi di rambut serta lengan teman-teman, aku sadar bahwa masa-masa sekolah sudah resmi usai. Duduk berjam-jam mendengarkan pengenalan kampus dan materi baru tidak terasa membosankan karena atmosfer kebersamaan yang begitu terasa. Hari itu bukan cuma tentang pengenalan lingkungan baru, tapi menjadi titik awal perjuangan dan cerita seru yang siap aku ukir sebagai mahasiswa Gundar!</p> 
+                    </div> 
                 </div>
-
-                <div id="cerita-lebaran" class="tab-content hidden animate-fade">
-                    <div class="flex items-center mb-6">
-                        <div class="w-2 h-8 bg-sky-500 rounded-full mr-3"></div>
-                        <h2 class="text-3xl font-bold text-slate-800">Cerita Lebaran</h2>
-                    </div>
-                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-blue-50">
-                        <div class="mb-6 rounded-xl overflow-hidden shadow-md">
-                            <div class="mb-6 rounded-xl overflow-hidden shadow-md border-4 border-blue-500">
-                                <img src="foto-lebaran.jpg" alt="Foto Lebaran" class="w-full h-[300px] md:h-[400px] object-cover" onerror="this.src='https://via.placeholder.com/800x400?text=Foto+Lebaran+Fariz'">
-                            </div>
-                        </div>
-                        <p class="text-slate-600 text-lg leading-relaxed">Cerita lebaran akan muncul di sini...</p>
-                    </div>
+                <!-- BAGIAN CERITA 4 YANG BARU DITAMBAHKAN -->
+                <div id="cerita-4" class="tab-content hidden animate-fade"> 
+                    <div class="flex items-center mb-6"> 
+                        <div class="w-2 h-8 bg-indigo-500 rounded-full mr-3"></div> 
+                        <h2 class="text-3xl font-bold text-slate-800">Cerita 4</h2> 
+                    </div> 
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-blue-50"> 
+                        <div class="mb-6 rounded-xl overflow-hidden shadow-md"> 
+                            <div class="mb-6 rounded-xl overflow-hidden shadow-md border-4 border-blue-500"> 
+                                <img src="foto-cerita-4.jpg" alt="Foto Cerita 4" class="w-full h-[300px] md:h-[400px] object-cover" onerror="this.src='https://via.placeholder.com/800x400?text=Foto+Cerita+4+Fariz'"> 
+                            </div> 
+                        </div> 
+                        <p class="text-slate-600 text-lg leading-relaxed">Cerita 4 akan muncul di sini...</p> 
+                    </div> 
                 </div>
+                <!-- AKHIR BAGIAN CERITA 4 -->
+            </div> 
+        </div> 
+    </div> 
 
-                <div id="cerita-liburan" class="tab-content hidden animate-fade">
-                    <div class="flex items-center mb-6">
-                        <div class="w-2 h-8 bg-indigo-500 rounded-full mr-3"></div>
-                        <h2 class="text-3xl font-bold text-slate-800">Liburan Lebaran</h2>
-                    </div>
-                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-blue-50">
-                        <div class="mb-6 rounded-xl overflow-hidden shadow-md">
-                            <div class="mb-6 rounded-xl overflow-hidden shadow-md border-4 border-blue-500">
-                                <img src="pari.jpeg" alt="Foto Liburan" class="w-full h-[300px] md:h-[400px] object-cover" onerror="this.src='https://via.placeholder.com/800x400?text=Foto+Liburan+Fariz'">
-                            </div>
-                        </div>
-                        <p class="text-slate-600 text-lg leading-relaxed">Cerita liburan akan muncul di sini...</p>
-                    </div>
-                </div>
-                
-                <div id="cerita-pkkmb" class="tab-content hidden animate-fade">
-                    <div class="flex items-center mb-6">
-                        <div class="w-2 h-8 bg-indigo-500 rounded-full mr-3"></div>
-                        <h2 class="text-3xl font-bold text-slate-800">Cerita Saat PKKMB</h2>
-                    </div>
-                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-blue-50">
-                        <div class="mb-6 rounded-xl overflow-hidden shadow-md">
-                            <div class="mb-6 rounded-xl overflow-hidden shadow-md border-4 border-blue-500">
-                                <img src="pkkmb.jpeg" alt="Foto PKKMB" class="w-full h-[300px] md:h-[400px] object-cover" onerror="this.src='https://via.placeholder.com/800x400?text=Foto+PKKMB+Fariz'">
-                            </div>
-                        </div>
-                        <p class="text-slate-600 text-lg leading-relaxed">Cerita saat PKKMB akan muncul di sini...</p>
-                    </div>
-                </div>
-
-            </div>
-
-            
-        </div>
-    </div>
-
-    <script>
-        const menuBtn = document.getElementById('menu-btn');
-        const dropdownMenu = document.getElementById('dropdown-menu');
-
-        menuBtn.addEventListener('click', () => dropdownMenu.classList.toggle('hidden'));
-        document.addEventListener('click', (e) => {
-            if (!menuBtn.contains(e.target) && !dropdownMenu.contains(e.target)) dropdownMenu.classList.add('hidden');
-        });
-
-        function switchTab(tabId) {
-            document.querySelectorAll('.tab-content').forEach(tab => {
-                tab.classList.add('hidden');
-                tab.classList.remove('block');
-            });
-            const activeTab = document.getElementById(tabId);
-            activeTab.classList.remove('hidden');
-            activeTab.classList.add('block');
-            dropdownMenu.classList.add('hidden');
-        }
-    </script>
-</body>
+    <script> 
+        const menuBtn = document.getElementById('menu-btn'); 
+        const dropdownMenu = document.getElementById('dropdown-menu'); 
+        menuBtn.addEventListener('click', () => dropdownMenu.classList.toggle('hidden')); 
+        document.addEventListener('click', (e) => { 
+            if (!menuBtn.contains(e.target) && !dropdownMenu.contains(e.target)) dropdownMenu.classList.add('hidden'); 
+        }); 
+        function switchTab(tabId) { 
+            document.querySelectorAll('.tab-content').forEach(tab => { 
+                tab.classList.add('hidden'); 
+                tab.classList.remove('block'); 
+            }); 
+            const activeTab = document.getElementById(tabId); 
+            activeTab.classList.remove('hidden'); 
+            activeTab.classList.add('block'); 
+            dropdownMenu.classList.add('hidden'); 
+        } 
+    </script> 
+</body> 
 </html>
